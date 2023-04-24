@@ -17,14 +17,15 @@ def setup():
         ])
 #set-up
 exit_conditions = (":q", "quit", "exit")
-contentFilter = ["nigger", "nigga", "fuck", "shit", "bitch", "motherfucker", "ass", "asshole", "dick", "pussy", "faggot", "fag", "nazi", "nager", "osama", "laden", "hitler", "twin towers", "osama bin laden", "fa.g", "monkey", "meth"]
+contentFilter = ["nigger", "nigga", "fuck", "shit", "bitch", "motherfucker", "ass", "asshole", "dick", "pussy", "faggot", "fag", "nazi", "nager", "osama", "laden", "hitler", "twin towers", "osama bin laden", "fa.g", "monkey", "meth", "naeger", "neger"]
 
 def respond(input):
     query = input
     response = chatbot.get_response(query)
-    #for word in contentFilter:
-        #response = response.lower()
-        #response = response.sub('***', response)
+    response = str(response)
+    for word in contentFilter:
+        response = response.lower()
+        response = response.replace(word, "*")
     return response
 
 AETOABChan = ["i-80 john", "youtube", "80's song", "i-80", "dub john", "tub john", "a chong", "age of john", "280 john", "8010", "hey john", "uh-oh john"] #use this list for voice recognition correction later
