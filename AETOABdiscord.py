@@ -36,7 +36,7 @@ def TTSave(TTString):
 
 TTSave(TTString)
 
-contentFilter = ["nigger", "nigga", "fuck", "shit", "bitch", "motherfucker", "ass", "asshole", "dick", "pussy", "faggot", "fag", "nazi", "nager", "osama", "laden", "hitler", "twin towers", "osama bin laden", "fa.g", "monkey", "meth", "naeger", "neger"]
+contentFilter = [" nigger", " nigga", " fuck", " shit", " bitch", " motherfucker", " ass", " asshole", " dick", " pussy", " faggot", " fag", " nazi", " nager", " osama", " laden", " hitler", " twin towers", " osama bin laden", " fa.g", " meth", " naeger", " neger"]
 
 @bot.command()
 async def s(ctx, *, arg):
@@ -44,7 +44,7 @@ async def s(ctx, *, arg):
     response = respond(arg)
     for word in contentFilter:
         response = response.lower()
-        response = response.replace(word, "*")
+        response = response.replace(word, " *")
     print(response)
     await ctx.send(str(response))
 
