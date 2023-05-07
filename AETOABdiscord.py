@@ -18,7 +18,7 @@ import ffmpeg
 #--AETOAB STUFF--
 setup()
 #--DISCORD STUFF--
-discordToken = "MTEwMDIyODU0ODUyODE3NzI4Mg.GN-acC.309bR5C7bKIqlziyhPd1ZUx6hvpoTOmh6Cfegg"
+discordToken = "insert_token_here"
 discordChannelID = 1098455638289428550
 
 bot = commands.Bot(command_prefix="ae!", intents=discord.Intents.all())
@@ -76,3 +76,4 @@ def isConnected(ctx):
     return voice_client and voice_client.is_connected()
 
 bot.run(discordToken)
+
