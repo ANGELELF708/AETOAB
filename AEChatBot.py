@@ -10,7 +10,7 @@ import time
 time.clock = time.time
 from AETOABsource import respond, setup
 #--CHATBOT STUFF--
-setup
+setup()
 #set-up
 exit_conditions = (":q", "quit", "exit")
 
